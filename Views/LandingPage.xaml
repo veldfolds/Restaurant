@@ -4,6 +4,15 @@
              x:Class="MauiApp2.Views.LandingPage"
              Shell.NavBarIsVisible="False">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Lexend" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <Grid x:Name="backg" HorizontalOptions="FillAndExpand"
           BackgroundColor="Yellow"
           Padding="0">
@@ -20,22 +29,22 @@
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="30, 30,0,0"/>
             </Border.StrokeShape>
-
-        <Grid VerticalOptions="End"
+            
+            <Grid VerticalOptions="End"
               HorizontalOptions="FillAndExpand"
               HeightRequest="200"
               BackgroundColor="White">
 
-            <VerticalStackLayout VerticalOptions="Start"
+                <VerticalStackLayout VerticalOptions="Start"
                                  HorizontalOptions="Start"
                                  Margin="20"
                                  Spacing="20">
-                <Label Text="Ready For"/>
-                <Label Text="Delicious Pizza ..."/>
-            </VerticalStackLayout>
+                    <Label Text="Ready For"/>
+                    <Label Text="Delicious Pizza ..."/>
+                </VerticalStackLayout>
 
-            
-            <ImageButton BackgroundColor="Black" 
+
+                <ImageButton BackgroundColor="Black" 
                          HorizontalOptions="End"
                          VerticalOptions="End"
                          Source="iconarrow.png"
@@ -44,6 +53,7 @@
                          CornerRadius="18"
                          Margin="10"
                          Padding="15"/>
-        </Grid>
+            </Grid>
+        </Border>
     </Grid>
 </ContentPage>
