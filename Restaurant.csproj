@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\lexend.ttf" />
 	  <None Remove="Resources\Images\iconarrow.svg" />
 	  <None Remove="Resources\Images\land.png" />
 	  <None Remove="Resources\Images\landingbg.svg" />
