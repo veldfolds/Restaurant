@@ -10,8 +10,16 @@
         <Image Source="land.png"
                WidthRequest="1400"
                HeightRequest="1800"
-               Scale="1"
-               TranslationX="140"/>
+               Scale="0.8"
+               TranslationX="120"/>
+
+        <Border BackgroundColor="White"
+                VerticalOptions="End"
+                HeightRequest="200"
+                Opacity="0.99">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30, 30,0,0"/>
+            </Border.StrokeShape>
 
         <Grid VerticalOptions="End"
               HorizontalOptions="FillAndExpand"
