@@ -52,7 +52,8 @@
                          WidthRequest="85"
                          CornerRadius="18"
                          Margin="10"
-                         Padding="15"/>
+                         Padding="15"
+                         Clicked="NextButtonClicked"/>
             </Grid>
         </Border>
     </Grid>
