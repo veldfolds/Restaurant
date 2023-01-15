@@ -3,10 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.Views.MenuPage"
              Title="MenuPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid RowDefinitions="4*, 6*">
+        <!--#region MENUPAGE_HEADER -->
+        <Frame />
+        <!--#endregion-->
+        
+        <!--#region MENU -->
+        <CollectionView Grid.Row="1">
+            <CollectionView.Header>
+                <HorizontalStackLayout>
+                    <Label Text="{Binding SelectedFood}"/>
+                </HorizontalStackLayout>
+            </CollectionView.Header>
+        </CollectionView>
+        <!--#endregion-->
+    </Grid>
 </ContentPage>
