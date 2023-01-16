@@ -20,4 +20,6 @@ class RestaurantMenuItem
 
     public double Price { get; set; }
 
+    public int RequestCount { get; set; } = 0;
+
 }
