@@ -4,13 +4,18 @@
              x:Class="MauiApp2.Views.Templates.CheckoutView">
 
     <Grid ColumnDefinitions="*,*">
+        
         <Grid x:Name="platesView">
-            <Image x:Name="firstPlate" />
-            
             <StackLayout x:Name="remainingPlates" Grid.Column="0" Orientation="Horizontal">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <Image TranslationX="-15" />
+                        <Image TranslationX="-15">
+                            <Image.Triggers>
+                                <DataTrigger Value="0">
+                                    <Setter Property="TranslationX" Value="0" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </StackLayout>
@@ -26,5 +31,6 @@
                 </HorizontalStackLayout>
             </Grid>
         </Grid>
+        
     </Grid>
 </ContentView>
