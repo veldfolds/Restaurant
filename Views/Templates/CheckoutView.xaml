@@ -4,34 +4,30 @@
              x:Class="MauiApp2.Views.Templates.CheckoutView">
 
     <Grid ColumnDefinitions="*,*">
-        
-       
-            <StackLayout x:Name="remainingPlates"
-                         Grid.Column="0" Orientation="Horizontal"
-                         >
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <Image TranslationX="-15">
-                            <Image.Triggers>
-                                <DataTrigger Value="0">
-                                    <Setter Property="TranslationX" Value="0" />
-                                </DataTrigger>
-                            </Image.Triggers>
-                        </Image>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-            </StackLayout>
-   
+        <StackLayout x:Name="remainingPlates"
+                         Grid.Column="0" Orientation="Horizontal">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Image TranslationX="-15">
+                        <Image.Triggers>
+                            <DataTrigger Value="0">
+                                <Setter Property="TranslationX" Value="0" />
+                            </DataTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
 
         <Grid x:Name="amountView" RowDefinitions="Auto, Auto, *">
             <Label Text="Total Amount"/>
             <Label Text="{Binding TotalPrice}" />
-            <Grid>
+            <Frame Padding="0">
                 <HorizontalStackLayout Spacing="15">
                     <Label Text="Pay"/>
-                    <Image Source="iconarrow" />
+                    <Image Source="whiteiconarrow" />
                 </HorizontalStackLayout>
-            </Grid>
+            </Frame>
         </Grid>
         
     </Grid>

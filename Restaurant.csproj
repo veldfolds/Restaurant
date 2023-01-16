@@ -54,6 +54,8 @@
 	  <None Remove="Resources\Images\land.png" />
 	  <None Remove="Resources\Images\landingbg.svg" />
 	  <None Remove="Resources\Images\landingwindow.svg" />
+	  <None Remove="Resources\Images\visiconarrow.svg" />
+	  <None Remove="Resources\Images\whiteiconarrow.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

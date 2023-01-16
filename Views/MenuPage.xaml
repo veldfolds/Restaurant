@@ -16,7 +16,7 @@
                     <Label Text="{Binding SelectedFood}"/>
                     <HorizontalStackLayout>
                         <Label Text="Max Price"/>
-                        <Image Source="" />
+                        <Image Source="visiconarrow.svg" />
                     </HorizontalStackLayout>
                 </HorizontalStackLayout>
             </CollectionView.Header>
