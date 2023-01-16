@@ -13,13 +13,33 @@
         <CollectionView Grid.Row="1">
             <CollectionView.Header>
                 <HorizontalStackLayout>
-                    <Label Text="{Binding SelectedFood}"/>
-                    <HorizontalStackLayout>
+                    <Label Text="{Binding SelectedFood}"
+                           HorizontalOptions="Start"/>
+                    <HorizontalStackLayout HorizontalOptions="End">
                         <Label Text="Max Price"/>
                         <Image Source="visiconarrow.svg" />
                     </HorizontalStackLayout>
                 </HorizontalStackLayout>
             </CollectionView.Header>
+          
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,*">
+                        <Grid>
+                            <Grid>
+                                <Label />
+                            </Grid>
+                            
+                            <Image />
+                            
+                            <Grid>
+                                <Ellipse />
+                                <Label />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
         </CollectionView>
         <!--#endregion-->
     </Grid>
