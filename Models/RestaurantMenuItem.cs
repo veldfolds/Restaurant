@@ -1,6 +1,6 @@
 ﻿namespace MauiApp2.Models;
 
-class RestaurantMenuItem
+public class RestaurantMenuItem
 {
     public string CommonName { get; set; }
 

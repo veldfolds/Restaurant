@@ -14,6 +14,10 @@
             <CollectionView.Header>
                 <HorizontalStackLayout>
                     <Label Text="{Binding SelectedFood}"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Max Price"/>
+                        <Image Source="" />
+                    </HorizontalStackLayout>
                 </HorizontalStackLayout>
             </CollectionView.Header>
         </CollectionView>

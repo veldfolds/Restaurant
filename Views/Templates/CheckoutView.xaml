@@ -5,8 +5,10 @@
 
     <Grid ColumnDefinitions="*,*">
         
-        <Grid x:Name="platesView">
-            <StackLayout x:Name="remainingPlates" Grid.Column="0" Orientation="Horizontal">
+       
+            <StackLayout x:Name="remainingPlates"
+                         Grid.Column="0" Orientation="Horizontal"
+                         >
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <Image TranslationX="-15">
@@ -19,7 +21,7 @@
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </StackLayout>
-        </Grid>
+   
 
         <Grid x:Name="amountView" RowDefinitions="Auto, Auto, *">
             <Label Text="Total Amount"/>

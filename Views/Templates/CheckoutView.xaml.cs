@@ -1,3 +1,6 @@
+using MauiApp2.Models;
+using System.Collections.ObjectModel;
+
 namespace MauiApp2.Views.Templates;
 
 public partial class CheckoutView : ContentView
@@ -11,8 +14,13 @@ public partial class CheckoutView : ContentView
         set => SetValue(TotalPriceProperty, value);
     }
 
-	public CheckoutView()
+    public ObservableCollection<RestaurantMenuItem> SourceItems { get; set; }
+
+
+    public CheckoutView()
 	{
 		InitializeComponent();
+
+        BindableLayout.SetItemsSource(remainingPlates, SourceItems);
 	}
 }
