@@ -34,8 +34,10 @@
                            HorizontalOptions="Fill"
                            CornerRadius="25">
                         <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*,*,*">
-                            <!--<Grid>
-                            <Grid>
+                            <Grid Grid.RowSpan="4">
+                                <Image Source="{Binding ImageUrl}" 
+                                       Aspect="AspectFit"/>
+                                <!--<Grid>
                                 <Label />
                             </Grid>
                             
@@ -44,8 +46,8 @@
                             <Grid>
                                 <Ellipse />
                                 <Label />
+                            </Grid>-->
                             </Grid>
-                        </Grid>-->
 
                             <Grid Grid.RowSpan="4" Grid.Column="1">
                                 <VerticalStackLayout>
