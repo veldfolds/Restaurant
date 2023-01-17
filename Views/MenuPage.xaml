@@ -10,10 +10,11 @@
         <!--#endregion-->
         
         <!--#region MENU -->
-        <CollectionView Grid.Row="1">
+        <CollectionView Grid.Row="1" 
+                        >
             <CollectionView.Header>
                 <HorizontalStackLayout>
-                    <Label Text="{Binding SelectedFood}"
+                    <Label Text="Pizza"
                            HorizontalOptions="Start"/>
                     <HorizontalStackLayout HorizontalOptions="End">
                         <Label Text="Max Price"/>
@@ -25,7 +26,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid ColumnDefinitions="*,*,*">
-                        <Grid>
+                        <!--<Grid>
                             <Grid>
                                 <Label />
                             </Grid>
@@ -36,7 +37,7 @@
                                 <Ellipse />
                                 <Label />
                             </Grid>
-                        </Grid>
+                        </Grid>-->
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

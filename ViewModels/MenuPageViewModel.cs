@@ -17,7 +17,15 @@ class MenuPageViewModel : ReactiveObject
 
 	public MenuPageViewModel()
 	{
-		MenuItems = new(MenuItemsService.MenuItems);
+		MenuItems = new();
 
+	    MenuItemsService.MenuItems
+			            .Select(x =>
+						{
+							x.ItemIndex = MenuItemsService.MenuItems.IndexOf(x);
+							return x;
+						})
+						.ToList()
+						.ForEach(x => MenuItems.Add(x));
 	}
 }

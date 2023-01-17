@@ -22,4 +22,6 @@ public class RestaurantMenuItem
 
     public int RequestCount { get; set; } = 0;
 
+    public int ItemIndex { get; set; }
+
 }

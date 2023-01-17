@@ -10,7 +10,7 @@
                 <DataTemplate>
                     <Image TranslationX="-15">
                         <Image.Triggers>
-                            <DataTrigger Value="0">
+                            <DataTrigger TargetType="Image" Binding="{Binding Source={x:Reference .}, Path={x:Reference Index}}" Value="0">
                                 <Setter Property="TranslationX" Value="0" />
                             </DataTrigger>
                         </Image.Triggers>
