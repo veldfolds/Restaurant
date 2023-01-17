@@ -11,13 +11,13 @@
         
         <!--#region MENU -->
         <CollectionView Grid.Row="1" 
-                        >
+                        ItemsSource="{Binding MenuItems}">
             <CollectionView.Header>
                 <HorizontalStackLayout>
                     <Label Text="Pizza"
                            HorizontalOptions="Start"/>
                     <HorizontalStackLayout HorizontalOptions="End">
-                        <Label Text="Max Price"/>
+                        <Label Text="Max Price" TextColor="Black" FontSize="23"/>
                         <Image Source="visiconarrow.svg" />
                     </HorizontalStackLayout>
                 </HorizontalStackLayout>
@@ -38,6 +38,11 @@
                                 <Label />
                             </Grid>
                         </Grid>-->
+                        <Grid Grid.Column="1">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding CommonName}" />
+                            </VerticalStackLayout>
+                        </Grid>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
