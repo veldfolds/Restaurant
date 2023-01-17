@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp2.Views.MenuPage"
-             Title="MenuPage">
+             Shell.NavBarIsVisible="False"
+             x:Class="MauiApp2.Views.MenuPage">
+    
 
     <Grid RowDefinitions="4*, 6*">
         <!--#region MENUPAGE_HEADER -->
@@ -11,7 +12,8 @@
         
         <!--#region MENU -->
         <CollectionView Grid.Row="1" 
-                        ItemsSource="{Binding MenuItems}">
+                        ItemsSource="{Binding MenuItems}"
+                        BackgroundColor="Transparent">
             <CollectionView.Header>
                 <HorizontalStackLayout>
                     <Label Text="Pizza"
@@ -25,8 +27,14 @@
           
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid ColumnDefinitions="*,*,*">
-                        <!--<Grid>
+                    <Frame Padding="0"
+                           BackgroundColor="White"
+                           HasShadow="True"
+                           HeightRequest="150"
+                           HorizontalOptions="Fill"
+                           CornerRadius="25">
+                        <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*,*,*">
+                            <!--<Grid>
                             <Grid>
                                 <Label />
                             </Grid>
@@ -38,12 +46,15 @@
                                 <Label />
                             </Grid>
                         </Grid>-->
-                        <Grid Grid.Column="1">
-                            <VerticalStackLayout>
-                                <Label Text="{Binding CommonName}" />
-                            </VerticalStackLayout>
+
+                            <Grid Grid.RowSpan="4" Grid.Column="1">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding CommonName}" />
+                                </VerticalStackLayout>
+                            </Grid>
+
                         </Grid>
-                    </Grid>
+                    </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
