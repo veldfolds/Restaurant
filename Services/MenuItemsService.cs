@@ -15,6 +15,7 @@ namespace MauiApp2.Services
            { 
                CommonName = "White Chicken",
                Name = "Spicy Chicken",
+               ImageUrl = "spicychicken.png",
                Ratings = 4.8,
                Discount = 2.1,
                Kcal = 510,
@@ -27,6 +28,7 @@ namespace MauiApp2.Services
            {
                CommonName = "Original Italian",
                Name = "Buffalo mozzarella",
+               ImageUrl = "buffalomozarella.png",
                Ratings = 3.9,
                Discount = 0,
                Kcal = 436,
@@ -38,6 +40,7 @@ namespace MauiApp2.Services
            {
                CommonName = "Meat Mexican",
                Name = "Ground Beef Tacos",
+               ImageUrl = "groundbeeftacos.png",
                Ratings = 4.2,
                Discount = 0,
                Kcal = 312,

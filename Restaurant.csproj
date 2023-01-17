@@ -50,10 +50,13 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\lexend.ttf" />
+	  <None Remove="Resources\Images\buffallomozarella.png" />
+	  <None Remove="Resources\Images\groundbeeftacos.png" />
 	  <None Remove="Resources\Images\iconarrow.svg" />
 	  <None Remove="Resources\Images\land.png" />
 	  <None Remove="Resources\Images\landingbg.svg" />
 	  <None Remove="Resources\Images\landingwindow.svg" />
+	  <None Remove="Resources\Images\spicychicken.png" />
 	  <None Remove="Resources\Images\visiconarrow.svg" />
 	  <None Remove="Resources\Images\whiteiconarrow.svg" />
 	</ItemGroup>
