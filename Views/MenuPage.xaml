@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Shell.NavBarIsVisible="False"
+             Padding="15"
              BackgroundColor="{x:StaticResource Background}"
              x:Class="MauiApp2.Views.MenuPage">
 
@@ -13,28 +14,74 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <Grid RowDefinitions="4*, 6*">
+    <Grid RowDefinitions="2.8*, 0.8*, 6.4*">
         <!--#region MENUPAGE_HEADER -->
-        <Frame />
+        <Grid RowDefinitions="2*, 8*">
+            <Grid Grid.Row="0">
+                
+            </Grid>
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
+                
+            </Grid>
+        </Grid>
         <!--#endregion-->
-        
+
+        <Border Grid.Row="1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+            
+            <CollectionView x:Name="courseItems" 
+                        BackgroundColor="Green"
+                        ItemsSource="{Binding CourseMenuImages}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"
+                                   ItemSpacing="40" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout
+                        VerticalOptions="Center">
+                            <Image Source="{Binding}" Opacity="1"
+                               WidthRequest="30"
+                               HeightRequest="30"/>
+                            <Line StrokeLineCap="Round" 
+                                  StrokeThickness="10"
+                                  BackgroundColor="Black"
+                                  StrokeLineJoin="Round"
+                              X1="0" X2="20"
+                              Y1="0" Y2="0"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Border>
+
         <!--#region MENU -->
-        <CollectionView Grid.Row="1" 
+        <CollectionView Grid.Row="2" 
                         ItemsSource="{Binding MenuItems}"
                         BackgroundColor="Transparent">
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout ItemSpacing="15"/>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="15"/>
             </CollectionView.ItemsLayout>
             
             <CollectionView.Header>
-                <HorizontalStackLayout>
+                <Grid>
                     <Label Text="Pizza"
-                           HorizontalOptions="Start"/>
+                           FontSize="Small"
+                           FontAttributes="Bold"
+                           HorizontalOptions="StartAndExpand"/>
+                    
                     <HorizontalStackLayout HorizontalOptions="End">
-                        <Label Text="Max Price" TextColor="Black" FontSize="23"/>
-                        <Image Source="visiconarrow.svg" />
+                        <Label Text="Max Price" TextColor="Black" FontSize="12"/>
+                        <Image Source="visiconarrow.svg" 
+                               HeightRequest="12"
+                               WidthRequest="12"/>
                     </HorizontalStackLayout>
-                </HorizontalStackLayout>
+                    
+                </Grid>
             </CollectionView.Header>
           
             <CollectionView.ItemTemplate>
@@ -42,7 +89,7 @@
                     <Frame Padding="0"
                            BackgroundColor="White"
                            HasShadow="True"
-                           HeightRequest="150"
+                           HeightRequest="130"
                            HorizontalOptions="Fill"
                            CornerRadius="25">
                         <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*,*,*">
@@ -61,14 +108,14 @@
                             </Grid>-->
                             </Grid>
 
-                            <Grid Grid.RowSpan="4" Grid.Column="1">
-                                <VerticalStackLayout>
-                                    <Label Text="{Binding CommonName}" />
-                                    <Label Text="{Binding Name}" />
-                                    <Label Text="{Binding Ratings}"/>
-                                </VerticalStackLayout>
-                                
-                                <Grid>
+                            <Label Grid.Column="1" 
+                                   Grid.Row="0"
+                                   Text="{Binding CommonName}"/>
+
+                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Name}" />
+                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Ratings}"/>
+
+                            <Grid Grid.Column="1" Grid.Row="3" >
                                     <Label>
                                         <Label.FormattedText>
                                             <FormattedString>
@@ -80,7 +127,6 @@
                                         </Label.FormattedText>
                                     </Label>
                                 </Grid>
-                            </Grid>
 
                         </Grid>
                     </Frame>

@@ -53,6 +53,11 @@
 	  <None Remove="Resources\Images\buffallomozarella.png" />
 	  <None Remove="Resources\Images\groundbeeftacos.png" />
 	  <None Remove="Resources\Images\iconarrow.svg" />
+	  <None Remove="Resources\Images\iconpngfish.svg" />
+	  <None Remove="Resources\Images\iconpngpizza.svg" />
+	  <None Remove="Resources\Images\iconpngsoup.svg" />
+	  <None Remove="Resources\Images\iconpngsteak.svg" />
+	  <None Remove="Resources\Images\iconpngsushi.svg" />
 	  <None Remove="Resources\Images\land.png" />
 	  <None Remove="Resources\Images\landingbg.svg" />
 	  <None Remove="Resources\Images\landingwindow.svg" />
@@ -72,6 +77,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MenuPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Templates\CategoryView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Templates\CheckoutView.xaml">

@@ -11,13 +11,27 @@ class MenuPageViewModel : ReactiveObject
 {
 	public ObservableCollection<RestaurantMenuItem> MenuItems { get; set; }
 
+	public ObservableCollection<string> CourseMenuImages { get; set; } 
+		
+
 	[Reactive] public RestaurantMenuItem SelectedItem { get; set; }
 
 	[Reactive] public double TotalAmount { get; set; }
 
+
+
 	public MenuPageViewModel()
 	{
-		MenuItems = new();
+		CourseMenuImages = new ObservableCollection<string>()
+        {
+            "iconpngfish.png",
+            "iconpngpizza.png",
+            "iconpngsoup.png",
+            "iconpngsteak.png",
+            "iconpngsushi.png"
+        };
+
+        MenuItems = new();
 
 	    MenuItemsService.MenuItems
 			            .Select(x =>
