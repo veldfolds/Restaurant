@@ -18,10 +18,15 @@
         <!--#region MENUPAGE_HEADER -->
         <Grid RowDefinitions="2*, 8*">
             <Grid Grid.Row="0">
-                
+                <Image />
+                <Label Text="Today, 2 october 2020" />
+                <Image/>
             </Grid>
             <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
-                
+                <VerticalStackLayout Grid.Row="0" Grid.Column="1">
+                    <Label Text="Total Amount" />
+                    <Label Text="$42.85" />
+                </VerticalStackLayout>
             </Grid>
         </Grid>
         <!--#endregion-->
