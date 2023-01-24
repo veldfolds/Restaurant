@@ -32,6 +32,22 @@
             </Grid>
             
             <Grid Grid.Row="1" RowDefinitions="*,*" ColumnDefinitions="*,*">
+                <CollectionView>
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal"
+                                           ItemSpacing="0"
+                                           SnapPointsType="Mandatory"
+                                           SnapPointsAlignment="Start"/>
+                    </CollectionView.ItemsLayout>
+                
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                
+                </CollectionView>
+                
                 <VerticalStackLayout HorizontalOptions="Start"
                                      Grid.Row="0"
                                      Grid.Column="1">
@@ -46,7 +62,7 @@
                         WidthRequest="150"
                         Background="Black">
                     <Border.StrokeShape>
-                        <RoundRectangle BackgroundColor="Black" CornerRadius="10"/>
+                        <RoundRectangle BackgroundColor="Black" CornerRadius="15"/>
                     </Border.StrokeShape>
                     
                     <HorizontalStackLayout BackgroundColor="Black" 
@@ -82,14 +98,13 @@
                         <VerticalStackLayout
                         VerticalOptions="Center">
                             <Image Source="{Binding}" Opacity="1"
-                               WidthRequest="30"
-                               HeightRequest="30"/>
+                               WidthRequest="25"
+                               HeightRequest="25"/>
                             <Line StrokeLineCap="Round" 
-                                  StrokeThickness="10"
-                                  BackgroundColor="Black"
-                                  StrokeLineJoin="Round"
-                              X1="0" X2="20"
-                              Y1="0" Y2="0"/>
+                                  StrokeThickness="7"
+                                  Stroke="Black"
+                                  X1="0" X2="20"
+                                  Y1="0" Y2="0"/>
                         </VerticalStackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

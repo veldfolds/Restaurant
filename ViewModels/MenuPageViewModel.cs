@@ -24,11 +24,12 @@ class MenuPageViewModel : ReactiveObject
 	{
 		CourseMenuImages = new ObservableCollection<string>()
         {
-            "iconpngfish.png",
             "iconpngpizza.png",
+            "iconpngfish.png",
             "iconpngsoup.png",
             "iconpngsteak.png",
-            "iconpngsushi.png"
+            "iconpngsushi.png" ,
+			"iconpngicecream.png"
         };
 
         MenuItems = new();
