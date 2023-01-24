@@ -28,7 +28,7 @@
                 VerticalOptions="End"
                 HeightRequest="200">
             <Border.StrokeShape>
-                <RoundRectangle CornerRadius="30, 30,0,0"/>
+                <RoundRectangle CornerRadius="30,30,0,0"/>
             </Border.StrokeShape>
             
             <Grid VerticalOptions="End"
@@ -38,8 +38,8 @@
 
                 <VerticalStackLayout VerticalOptions="Start"
                                      HorizontalOptions="Start"
-                                 Margin="20"
-                                 Spacing="20">
+                                     Margin="20"
+                                     Spacing="20">
                     <Label Text="Ready For" FontSize="14"/>
                     <Label Text="Delicious Pizza ..." FontSize="30"/>
                 </VerticalStackLayout>

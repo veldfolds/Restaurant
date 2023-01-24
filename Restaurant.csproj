@@ -50,7 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\lexend.ttf" />
-	  <None Remove="Resources\Images\buffallomozarella.png" />
+	  <None Remove="Resources\Images\buffalomozarella.png" />
 	  <None Remove="Resources\Images\groundbeeftacos.png" />
 	  <None Remove="Resources\Images\iconarrow.svg" />
 	  <None Remove="Resources\Images\iconfavourite.svg" />

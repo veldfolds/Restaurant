@@ -146,9 +146,26 @@
                            HorizontalOptions="Fill"
                            CornerRadius="25">
                         <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*,*,*">
-                            <Grid Grid.RowSpan="4">
+
+                            <Label Grid.Row="0" Grid.Column="0"
+                                       Text="2.555% OFF"
+                                       FontSize="Micro"
+                                       Background="Red" 
+                                   HorizontalTextAlignment="Center"
+                                   VerticalOptions="End"
+                                   ZIndex="1"
+                                   WidthRequest="80"/>
+                                
                                 <Image Source="{Binding ImageUrl}" 
-                                       Aspect="AspectFit"/>
+                                       Aspect="AspectFit"
+                                       Grid.RowSpan="4"/>
+
+                                <Grid Grid.Column="0" Grid.Row="3"
+                                      HorizontalOptions="Start">
+                                    <Ellipse Fill="Black"
+                                         WidthRequest="50"
+                                         HeightRequest="50" />
+                                </Grid>
                                 <!--<Grid>
                                 <Label />
                             </Grid>
@@ -159,8 +176,7 @@
                                 <Ellipse />
                                 <Label />
                             </Grid>-->
-                            </Grid>
-
+                          
                             <Label Grid.Column="1" 
                                    Grid.Row="0"
                                    Text="{Binding CommonName}"/>
@@ -168,9 +184,9 @@
                             <Label Grid.Column="1" Grid.Row="1" Text="{Binding Name}" />
 
                             <!--#region RATINGS -->
-                            <HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1" Grid.Row="2">
                                 <Image Source="iconfavourite.png" WidthRequest="15" HeightRequest="15"/>
-                                <Label Grid.Column="1" Grid.Row="2" Text="{Binding Ratings}"/>
+                                <Label Text="{Binding Ratings}"/>
                             </HorizontalStackLayout>
                             <!--#endregion-->
 
@@ -182,14 +198,14 @@
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <FormattedString.Spans>
-                                                    <Span  Text="$" />
+                                                    <Span Text="$"/>
                                                     <Span Text="{Binding Price}"/>
                                                 </FormattedString.Spans>
                                             </FormattedString>
                                         </Label.FormattedText>
-                                    </Label>
+                                </Label>
 
-                                <Image Source="plus.png" WidthRequest="15" HeightRequest="15"/>
+                                <Image Grid.Column="2" Source="plus.png" WidthRequest="50" HeightRequest="50"/>
                             </Grid>
 
                         </Grid>
