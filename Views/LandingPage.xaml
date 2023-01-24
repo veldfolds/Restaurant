@@ -9,23 +9,24 @@
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="Lexend" />
                 <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Bold" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <Grid x:Name="backg" HorizontalOptions="FillAndExpand"
-          BackgroundColor="Yellow"
+          BackgroundColor="White"
           Padding="0">
+        
         <Image Source="land.png"
                WidthRequest="1400"
                HeightRequest="1800"
                Scale="0.8"
-               TranslationX="120"/>
+               TranslationX="20"/>
 
         <Border BackgroundColor="White"
                 VerticalOptions="End"
-                HeightRequest="200"
-                Opacity="0.99">
+                HeightRequest="200">
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="30, 30,0,0"/>
             </Border.StrokeShape>
@@ -36,11 +37,11 @@
               BackgroundColor="White">
 
                 <VerticalStackLayout VerticalOptions="Start"
-                                 HorizontalOptions="Start"
+                                     HorizontalOptions="Start"
                                  Margin="20"
                                  Spacing="20">
-                    <Label Text="Ready For"/>
-                    <Label Text="Delicious Pizza ..."/>
+                    <Label Text="Ready For" FontSize="14"/>
+                    <Label Text="Delicious Pizza ..." FontSize="30"/>
                 </VerticalStackLayout>
 
 

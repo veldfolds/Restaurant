@@ -53,6 +53,7 @@
 	  <None Remove="Resources\Images\buffallomozarella.png" />
 	  <None Remove="Resources\Images\groundbeeftacos.png" />
 	  <None Remove="Resources\Images\iconarrow.svg" />
+	  <None Remove="Resources\Images\iconfavourite.svg" />
 	  <None Remove="Resources\Images\iconhamenu.svg" />
 	  <None Remove="Resources\Images\iconpngfish.svg" />
 	  <None Remove="Resources\Images\iconpngicecream.svg" />
@@ -64,6 +65,8 @@
 	  <None Remove="Resources\Images\land.png" />
 	  <None Remove="Resources\Images\landingbg.svg" />
 	  <None Remove="Resources\Images\landingwindow.svg" />
+	  <None Remove="Resources\Images\minus.svg" />
+	  <None Remove="Resources\Images\plus.svg" />
 	  <None Remove="Resources\Images\spicychicken.png" />
 	  <None Remove="Resources\Images\visiconarrow.svg" />
 	  <None Remove="Resources\Images\whiteiconarrow.svg" />

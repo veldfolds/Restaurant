@@ -19,7 +19,6 @@ class MenuPageViewModel : ReactiveObject
 	[Reactive] public double TotalAmount { get; set; }
 
 
-
 	public MenuPageViewModel()
 	{
 		CourseMenuImages = new ObservableCollection<string>()
@@ -28,7 +27,7 @@ class MenuPageViewModel : ReactiveObject
             "iconpngfish.png",
             "iconpngsoup.png",
             "iconpngsteak.png",
-            "iconpngsushi.png" ,
+            "iconpngsushi.png",
 			"iconpngicecream.png"
         };
 

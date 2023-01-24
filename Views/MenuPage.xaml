@@ -42,7 +42,7 @@
                 
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            
+                                
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 
@@ -73,7 +73,7 @@
                                HorizontalOptions="Center" 
                                VerticalOptions="Center" 
                                FontSize="Medium"/>
-                        <Image Source="whiteiconarrow.png" HorizontalOptions="Center" WidthRequest="15" HeightRequest="15"/>
+                        <Image Source="iconarrow.png" HorizontalOptions="Center" WidthRequest="15" HeightRequest="15"/>
                     </HorizontalStackLayout>
                 </Border>
             </Grid>
@@ -166,10 +166,19 @@
                                    Text="{Binding CommonName}"/>
 
                             <Label Grid.Column="1" Grid.Row="1" Text="{Binding Name}" />
-                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Ratings}"/>
 
-                            <Grid Grid.Column="1" Grid.Row="3" >
-                                    <Label>
+                            <!--#region RATINGS -->
+                            <HorizontalStackLayout>
+                                <Image Source="iconfavourite.png" WidthRequest="15" HeightRequest="15"/>
+                                <Label Grid.Column="1" Grid.Row="2" Text="{Binding Ratings}"/>
+                            </HorizontalStackLayout>
+                            <!--#endregion-->
+
+                            <Grid Grid.Column="1" Grid.Row="3" 
+                                  ColumnDefinitions="2*, 6*, 2*">
+                                <Image Source="minus.png" />
+                                
+                                <Label Grid.Column="1">
                                         <Label.FormattedText>
                                             <FormattedString>
                                                 <FormattedString.Spans>
@@ -179,7 +188,9 @@
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
-                                </Grid>
+
+                                <Image Source="plus.png" WidthRequest="15" HeightRequest="15"/>
+                            </Grid>
 
                         </Grid>
                     </Frame>
