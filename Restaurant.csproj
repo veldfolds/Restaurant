@@ -53,11 +53,14 @@
 	  <None Remove="Resources\Images\buffallomozarella.png" />
 	  <None Remove="Resources\Images\groundbeeftacos.png" />
 	  <None Remove="Resources\Images\iconarrow.svg" />
+	  <None Remove="Resources\Images\iconhamenu.svg" />
 	  <None Remove="Resources\Images\iconpngfish.svg" />
+	  <None Remove="Resources\Images\iconpngicecream.svg" />
 	  <None Remove="Resources\Images\iconpngpizza.svg" />
 	  <None Remove="Resources\Images\iconpngsoup.svg" />
 	  <None Remove="Resources\Images\iconpngsteak.svg" />
 	  <None Remove="Resources\Images\iconpngsushi.svg" />
+	  <None Remove="Resources\Images\iconsearch.svg" />
 	  <None Remove="Resources\Images\land.png" />
 	  <None Remove="Resources\Images\landingbg.svg" />
 	  <None Remove="Resources\Images\landingwindow.svg" />

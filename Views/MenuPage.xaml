@@ -10,7 +10,11 @@
         <ResourceDictionary>
             <Style TargetType="Label" >
                 <Setter Property="TextColor" Value="Black" />
-            </Style>        
+            </Style>
+            <Style TargetType="Image" x:Key="headerImage">
+                <Setter Property="WidthRequest" Value="20" />
+                <Setter Property="HeightRequest" Value="20" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -18,15 +22,44 @@
         <!--#region MENUPAGE_HEADER -->
         <Grid RowDefinitions="2*, 8*">
             <Grid Grid.Row="0">
-                <Image />
-                <Label Text="Today, 2 october 2020" />
-                <Image/>
+                <Image Source="iconhamenu.png" Style="{x:StaticResource headerImage}"
+                       HorizontalOptions="Start"/>
+                
+                <Label Text="Today, 2 october 2020" HorizontalOptions="Center"/>
+                
+                <Image Source="iconsearch.png" Style="{x:StaticResource headerImage}"
+                       HorizontalOptions="End"/>
             </Grid>
-            <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
-                <VerticalStackLayout Grid.Row="0" Grid.Column="1">
-                    <Label Text="Total Amount" />
+            
+            <Grid Grid.Row="1" RowDefinitions="*,*" ColumnDefinitions="*,*">
+                <VerticalStackLayout HorizontalOptions="Start"
+                                     Grid.Row="0"
+                                     Grid.Column="1">
+                    <Label Text="Total Amount"/>
                     <Label Text="$42.85" />
                 </VerticalStackLayout>
+                
+                <Border Grid.Row="1" 
+                        Grid.Column="1"
+                        HorizontalOptions="Start"
+                        HeightRequest="60"
+                        WidthRequest="150"
+                        Background="Black">
+                    <Border.StrokeShape>
+                        <RoundRectangle BackgroundColor="Black" CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    
+                    <HorizontalStackLayout BackgroundColor="Black" 
+                                           HorizontalOptions="Center"
+                                           Spacing="15">
+                        <Label Text="Pay" 
+                               TextColor="White" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               FontSize="Medium"/>
+                        <Image Source="whiteiconarrow.png" HorizontalOptions="Center" WidthRequest="15" HeightRequest="15"/>
+                    </HorizontalStackLayout>
+                </Border>
             </Grid>
         </Grid>
         <!--#endregion-->
